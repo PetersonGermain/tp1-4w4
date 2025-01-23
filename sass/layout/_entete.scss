@@ -1,9 +1,10 @@
-.entete {
+.entete{
   display: flex;
   justify-content: space-between;
+  align-items: center;
 
   &__nav {
-    display: flex;
-    
+      display: flex;
+
   }
 }

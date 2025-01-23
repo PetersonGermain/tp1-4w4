@@ -18,6 +18,7 @@ Les Variables
 /* //////////////////
 Les Composants
 //////////////////// */
+/* /////////////////////////////////////////// menu principal */
 .menu {
   margin: 0;
   padding: 0;
@@ -26,7 +27,7 @@ Les Composants
 .menu__li {
   display: inline-block;
 }
-.menu__li__a {
+.menu__a {
   color: #333;
   text-decoration: none;
   padding: 2px 5px;
@@ -89,6 +90,7 @@ Layout
 .entete {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 .entete__nav {
   display: flex;
