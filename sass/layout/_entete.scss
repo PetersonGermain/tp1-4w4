@@ -2,9 +2,29 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  height: 6rem;
 
   &__nav {
-      display: flex;
+    display: flex;
+    @media screen and (max-width:$point_rupture) {
+      flex-direction: column;
+    }
+    align-items: center;
+    gap: 0 30px;
+    flex-wrap: wrap;
+  }
 
+  &__menu {
+    align-content: center;
+  }
+
+  &__recherche {
+    align-items: center;
+  }
+}
+
+.menu {
+  &__a {
+    font-size: smaller;
   }
 }

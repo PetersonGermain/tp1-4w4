@@ -1,0 +1,18 @@
+.recherche {
+  display: flex;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+
+  &__input {
+    flex: 1;
+    height: 1.3rem;
+    border: none;
+    outline: none;
+    background-color: rgba(0, 0, 0, 0.02);
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.06);
+    }
+  }
+  &__loupe{
+    border-left: 1px dotted rgba(0, 0, 0, 0.2);
+  }
+}

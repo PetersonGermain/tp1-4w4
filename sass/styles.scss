@@ -16,12 +16,14 @@ Text Domain: 4W4-peterson
 Les Variables
 //////////////////// */
 @import "variables/couleurs";
+@import "variables/dimensions";
 
 /* //////////////////
 Les Composants
 //////////////////// */
 @import "composants/menu";
 @import "composants/carte";
+@import "composants/recherche";
 
 /* //////////////////
 Layout
