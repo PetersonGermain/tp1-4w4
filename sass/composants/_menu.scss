@@ -1,5 +1,10 @@
 /* /////////////////////////////////////////// menu principal */
 .menu {
+  flex: 1 1 50%;
+  display: flex;
+  @media screen and (max-width: $point_rupture) {
+    flex-direction: column;
+  }
   margin: 0;
   padding: 0;
   list-style-type: none;

@@ -20,9 +20,16 @@ Les Composants
 //////////////////// */
 /* /////////////////////////////////////////// menu principal */
 .menu {
+  flex: 1 1 50%;
+  display: flex;
   margin: 0;
   padding: 0;
   list-style-type: none;
+}
+@media screen and (max-width: 700px) {
+  .menu {
+    flex-direction: column;
+  }
 }
 .menu__li {
   display: inline-block;
@@ -43,6 +50,9 @@ Le composant .carte
 }
 .carte--grande {
   padding: 40px;
+}
+.carte--petite {
+  padding: 20px;
 }
 .carte__image img {
   max-width: 100%;
@@ -74,6 +84,24 @@ Le composant .carte
   background-color: #0056b3;
 }
 
+.recherche {
+  display: flex;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+.recherche__input {
+  flex: 1;
+  height: 1.3rem;
+  border: none;
+  outline: none;
+  background-color: rgba(0, 0, 0, 0.02);
+}
+.recherche__input:hover {
+  background-color: rgba(0, 0, 0, 0.06);
+}
+.recherche__loupe {
+  border-left: 1px dotted rgba(0, 0, 0, 0.2);
+}
+
 /* //////////////////
 Layout
 //////////////////// */
@@ -86,12 +114,48 @@ Layout
   min-height: 100vh;
   background-image: url("images/maldives.jpg");
 }
+.hero__description {
+  width: 40rem;
+  font-weight: bold;
+}
+.hero__adresse, .hero__numero {
+  font-weight: bold;
+}
+.hero__bouton {
+  padding: 0.6rem 1.5rem 0.6rem 1.5rem;
+  border-radius: 10px;
+  background-color: rgb(154, 237, 245);
+  border: none;
+  font-size: small;
+}
+.hero__icone-app {
+  margin-top: 1rem;
+}
 
 .entete {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  height: 6rem;
 }
 .entete__nav {
   display: flex;
+  align-items: center;
+  gap: 0 30px;
+  flex-wrap: wrap;
+}
+@media screen and (max-width: 700px) {
+  .entete__nav {
+    flex-direction: column;
+  }
+}
+.entete__menu {
+  align-content: center;
+}
+.entete__recherche {
+  align-items: center;
+}
+
+.menu__a {
+  font-size: smaller;
 }/*# sourceMappingURL=styles.css.map */

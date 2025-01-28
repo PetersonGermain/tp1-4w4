@@ -6,4 +6,25 @@
 .hero{
   min-height: 100vh;
   background-image: url("images/maldives.jpg");
+
+  &__description {
+    width: 40rem;
+    font-weight: bold;
+  }
+
+  &__adresse, &__numero {
+    font-weight: bold;
+  }
+
+  &__bouton {
+    padding: 0.6rem 1.5rem 0.6rem 1.5rem;
+    border-radius: 10px;
+    background-color: rgb(154, 237, 245);
+    border: none;
+    font-size: small;
+  }
+
+  &__icone-app {
+    margin-top: 1rem;
+  }
 }
