@@ -1,11 +1,16 @@
+<?php 
+  // Modèle de base de notre thème
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mondo Voyages</title>
-    <link rel="stylesheet" href="normalize.css">
-    <link rel="stylesheet" href="styles.css">
+    <?php wp_head() ?>
+    <!-- <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="styles.css"> -->
 </head>
 <body>
     <header>
@@ -13,6 +18,12 @@
             <figure class="entete__logo">
                 <img src="images/logo.png" alt="logo voyage" width="100" height="100">
             </figure>
+            <label for="chk__burger" class="burger">
+                <div>
+                    <img src="https://s2.svgbox.net/hero-outline.svg?ic=menu&color=000" width="32" height="32">
+                </div>
+            </label>
+            <input type="checkbox" id="chk__burger" class="chk__burger">
             <div class="entete__nav">
                 <nav class="entete__menu">
                     <ul class="menu">
@@ -58,6 +69,7 @@
             </div>
         </div>
     </header>
+
     <section class="hero">
         <div class="hero__contenu global">
             <h1 class="hero__titre">
@@ -82,6 +94,7 @@
             </div>
         </div>
     </section>
+
     <section class="galerie">
         <figure class="galerie__fig">
             <img src="" alt="">
@@ -94,7 +107,7 @@
                 <img src="images/img1.jpg" alt="Image de voyage">
             </figure>
             <div class="carte__contenu">
-                <h2 class="carte__titre">Destination de rêve</h2>
+                <h2 class="carte__titre">Destinations de rêve</h2>
                 <p class="carte__description">Découvrez des endroits magnifiques à travers le monde.</p>
                 <button class="carte__bouton carte__bouton--actif">Réserver</button>
             </div>
