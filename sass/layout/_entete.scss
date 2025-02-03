@@ -1,3 +1,19 @@
+.burger {
+  z-index: 1;
+  display: none;
+  @media screen and (max-width: $point_rupture) {
+    display: block;
+  }
+}
+
+.chk__burger{
+  display: none;
+}
+
+.chk__burger:checked ~ .entete__nav {
+  display: block;
+}
+
 .entete{
   display: flex;
   justify-content: space-between;
@@ -6,8 +22,14 @@
 
   &__nav {
     display: flex;
-    @media screen and (max-width:$point_rupture) {
+    @media screen and (max-width: $point_rupture) {
       flex-direction: column;
+      display: none;
+      position: absolute;
+      top: 0;
+      right: 0;
+      background-color: white;
+      width: 100%;
     }
     align-items: center;
     gap: 0 30px;
@@ -16,15 +38,21 @@
 
   &__menu {
     align-content: center;
+    @media screen and (max-width: $point_rupture) {
+      margin-left: 50%;
+    }
+
   }
 
   &__recherche {
     align-items: center;
+    display: block;
+    @media screen and (max-width: $point_rupture) {
+      display: none;
+    }
   }
-}
 
-.menu {
-  &__a {
-    font-size: smaller;
+  &__logo {
+    z-index: 1;
   }
 }

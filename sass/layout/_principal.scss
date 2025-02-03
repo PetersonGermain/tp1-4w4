@@ -1,3 +1,7 @@
+html {
+  background-color: aliceblue;
+}
+
 .global {
   margin : 0 auto;
   max-width: 1100px;
@@ -7,9 +11,25 @@
   min-height: 100vh;
   background-image: url("images/maldives.jpg");
 
+  &__contenu {
+    padding-top: 5rem;
+    @media screen and (max-width: $point_rupture) {
+      margin-left: 12%;
+    }
+  }
+
+  &__titre {
+    font-size: 40px;
+    text-shadow: 1.5px 1.5px turquoise;
+  }
+
   &__description {
     width: 40rem;
     font-weight: bold;
+
+    @media screen and (max-width: $point_rupture) {
+      width: 20rem;
+    }
   }
 
   &__adresse, &__numero {
@@ -26,5 +46,25 @@
 
   &__icone-app {
     margin-top: 1rem;
+  }
+}
+
+.formulaire {
+  display: flex;
+  background-color: white;
+  position: absolute;
+  margin-left: 11%;
+  margin-top: -5%;
+  width: 70rem;
+  
+  &__bouton {
+    background-color: white;
+    height: 2rem;
+    align-self: center;
+    border-color: turquoise;
+  }
+
+  &__nomInput, &__prenomInput, &__courrielInput, &__telephoneInput {
+    border-color: turquoise;
   }
 }

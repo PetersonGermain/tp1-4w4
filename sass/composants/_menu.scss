@@ -10,11 +10,15 @@
   list-style-type: none;
   
     &__li {
-      display: inline-block;
+      padding: 0.5em;
+    }
+    &__a:visited {
+      color: blue;
     }
     &__a {
         color: #333;
         text-decoration: none;
         padding : 2px 5px;
+        font-size: smaller;
     }
   }
