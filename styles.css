@@ -170,6 +170,11 @@ html {
   margin-top: -5%;
   width: 70rem;
 }
+@media screen and (max-width: 700px) {
+  .formulaire {
+    display: none;
+  }
+}
 .formulaire__bouton {
   background-color: white;
   height: 2rem;
