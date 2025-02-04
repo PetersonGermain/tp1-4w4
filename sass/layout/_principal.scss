@@ -56,6 +56,9 @@ html {
   margin-left: 11%;
   margin-top: -5%;
   width: 70rem;
+  @media screen and (max-width: $point_rupture) {
+    display: none;
+  }
   
   &__bouton {
     background-color: white;
