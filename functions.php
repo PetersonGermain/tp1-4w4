@@ -3,21 +3,27 @@
  * functions.php
 */
 ?>
-<?php 
-function ajouter_css_dans_header() {
-  wp_enqueue_style(
-    'style_normalize',
-    get_template_directory_uri() . '/css/style.css',
-    array(),
-    filemtime(get_template_directory() . '/css/style.css'));
+
+<?php
+function theme_tp_enqueue_styles() { 
+wp_enqueue_style('normalize', get_template_directory_uri() . '/css/normalize.css'); 
+wp_enqueue_style('main-style', get_stylesheet_uri()); 
+} 
+add_action('wp_enqueue_scripts', 'theme_tp_enqueue_styles');
+
+/**
+ * Modifie la requete principale de WordPress avant qu'elle soit exécuté
+ * le hook « pre_get_posts » se manifeste juste avant d'exécuter la requête principal
+ * Dépendant de la condition initiale on peut filtrer un type particulier de requête
+ * Dans ce cas ci nous filtrons la requête de la page d'accueil
+ * @param WP_query  $query la requête principal de WP
+ */
+function modifie_requete_principal( $query ) {
+if ( $query->is_home() && $query->is_main_query() && ! is_admin() ) {
+  $query->set( 'category_name', 'populaire' );
+  $query->set( 'orderby', 'title' );
+  $query->set( 'order', 'ASC' );
   }
-
-wp_enqueue_style(
-  'style_principal',
-  get_template_directory_uri() . '/css/style.css',
-  array(),
-  filemtime(get_template_directory() . '/css/style.css'));
-
-add_action("wp_enqueue_scripts", "ajouter_css_dans_header");
-
-?>
+ }
+ add_action( 'pre_get_posts', 'modifie_requete_principal' );
+ ?>
