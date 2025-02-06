@@ -182,12 +182,6 @@ Layout
   margin-left: 11%;
   margin-top: -5%;
   width: 70rem;
-  box-shadow: 10px 5px 5px black;
-}
-@media screen and (max-width: 700px) {
-  .formulaire {
-    display: none;
-  }
 }
 .formulaire__bouton {
   background-color: white;
