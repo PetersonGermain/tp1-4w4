@@ -1,6 +1,6 @@
-html {
-  background-color: aliceblue;
-}
+// html {
+//   background-color: aliceblue;
+// }
 
 .global {
   margin : 0 auto;
@@ -56,9 +56,6 @@ html {
   margin-left: 11%;
   margin-top: -5%;
   width: 70rem;
-  @media screen and (max-width: $point_rupture) {
-    display: none;
-  }
   
   &__bouton {
     background-color: white;
@@ -69,5 +66,11 @@ html {
 
   &__nomInput, &__prenomInput, &__courrielInput, &__telephoneInput {
     border-color: turquoise;
+  }
+}
+
+.populaire {
+  &__article {
+    border: 1px solid black;
   }
 }

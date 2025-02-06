@@ -1,6 +1,6 @@
 /*
 Theme Name: 4W4-Peterson Germain
-Theme URI: https://wordpress.org/themes/twentytwenty/
+Theme URI: https://referenced.ca
 Author: Peterson Germain
 Author URI: https://github.com/PetersonGermain
 Description: Thème de base développer dans le cadre du cours 4W4
@@ -17,6 +17,12 @@ Les Variables
 //////////////////// */
 @import "variables/couleurs";
 @import "variables/dimensions";
+
+/* /////////////////////
+Base
+//////////////////////// */
+@import "base/simple";
+@import "base/lien";
 
 /* //////////////////
 Les Composants
