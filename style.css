@@ -51,14 +51,14 @@ Les Composants
 .menu__li {
   padding: 0.5em;
 }
-.menu__a:visited {
-  color: blue;
-}
-.menu__a {
+.menu__item a {
   color: #333;
   text-decoration: none;
   padding: 2px 5px;
   font-size: smaller;
+}
+.menu__a:visited {
+  color: blue;
 }
 
 /***********************
@@ -68,6 +68,10 @@ Le composant .carte
   border: 1px solid #ddd;
   padding: 20px;
   border-radius: 8px;
+  flex: 1 1 220px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 .carte--grande {
   padding: 40px;

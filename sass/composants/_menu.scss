@@ -12,13 +12,15 @@
     &__li {
       padding: 0.5em;
     }
-    &__a:visited {
-      color: blue;
-    }
-    &__a {
+    &__item {
+      a {
         color: #333;
         text-decoration: none;
         padding : 2px 5px;
         font-size: smaller;
+    }
+    }
+    &__a:visited {
+      color: blue;
     }
   }

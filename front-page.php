@@ -1,3 +1,10 @@
+<?php
+/**
+ * Modèle front-page.php permet d'Afficher la page d'Accuueil
+ * 
+ */
+?>
+
 <?php get_header(); ?>
 <h1>front-page.php</h1>
 
@@ -5,10 +12,11 @@
         <div class="hero__contenu global">
             <h1 class="hero__titre">
                 <!-- Voyagez autrement avec Mondo Voyages ! -->
+                 <?php echo bloginfo('name');?>
             </h1>
             <p class="hero__description">
-                Découvrez des destinations uniques et inoubliables avec Mondo Voyages. Nous vous offrons des expériences authentiques, des paysages à couper le souffle et des aventures sur mesure. Partez à la découverte du monde avec nous et créez des souvenirs impérissables.
-            </p>
+                <!-- Découvrez des destinations uniques et inoubliables avec Mondo Voyages. Nous vous offrons des expériences authentiques, des paysages à couper le souffle et des aventures sur mesure. Partez à la découverte du monde avec nous et créez des souvenirs impérissables. -->
+                <?php echo bloginfo('description');?>
             <a href="" class="hero__courriel">
                 info@cmaisonneuve.qc.ca
             </a>
@@ -73,12 +81,13 @@
     </section>
     <section class="populaire">
       <div class="global">
-        <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-          <article class="populaire__article">
-            <h2 class="populaire__titre"><?php the_title(); ?></h2>
-            <div class="populaire__contenu"><?php echo wp_trim_words(get_the_content(), 20, "..."); ?></div>
-          </article>
-        <?php endwhile; endif; ?>
+        <?php if (have_posts()) : while (have_posts()) : the_post(); 
+            if (in_category("galerie"))  {
+                the_content() ;
+            } else {    ?>
+                <?php get_template_part( 'gabarits/carte' ); ?>
+            <?php } ?>
+            <?php endwhile; endif; ?>
       </div>
     </section>
     <?php get_footer(); ?>
