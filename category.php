@@ -5,17 +5,13 @@
  */
 ?>
 <?php get_header() ?>
-<h1>index.php</h1>
+<h1>category.php</h1>
+<h1><?php single_cat_title();?></h1>
+<p> <?php echo category_description() ?> </p>
     <section class="populaire">
         <div class="boiteflex global">
             <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-            <article class="populaire__article">
-                <?php 
-                if (has_post_thumbnail())
-                the_post_thumbnail(); ?>
-                <h2 class="populaire__titre"><?php the_title(); ?></h2>
-                <div class="populaire__contenu"><?php the_content(); ?></div>
-            </article>
+                <?php get_template_part("gabarit/carte"); ?>
             <?php endwhile; endif; ?>
         </div>
     </section>

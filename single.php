@@ -5,9 +5,9 @@
  */
 ?>
 <?php get_header() ?>
-<h1>index.php</h1>
+<h1>single.php</h1>
     <section class="populaire">
-        <div class="boiteflex global">
+        <div class="global">
             <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
             <article class="populaire__article">
                 <?php 
