@@ -51,14 +51,14 @@ Les Composants
 .menu__li {
   padding: 0.5em;
 }
-.menu__a:visited {
-  color: blue;
-}
-.menu__a {
+.menu__item a {
   color: #333;
   text-decoration: none;
   padding: 2px 5px;
   font-size: smaller;
+}
+.menu__a:visited {
+  color: blue;
 }
 
 /***********************
@@ -68,6 +68,10 @@ Le composant .carte
   border: 1px solid #ddd;
   padding: 20px;
   border-radius: 8px;
+  flex: 1 1 220px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 .carte--grande {
   padding: 40px;
@@ -257,4 +261,35 @@ Layout
 }
 .entete__logo {
   z-index: 1;
+}
+
+/*
+  --------------------------------- Layout du pied de page
+*/
+footer {
+  background-color: rgb(236, 136, 13);
+  color: #000;
+}
+
+.piedpage {
+  display: flex;
+  flex-direction: column;
+}
+.piedpage__s1 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+}
+.piedpage__s1__externe {
+  flex: 0 0 20%;
+}
+.piedpage__s1__externe .menu {
+  display: flex;
+  flex-direction: column;
+}
+.piedpage__s1__adresse {
+  flex: 0 0 40%;
+}
+.piedpage__s1__description {
+  flex: 1 0 400px;
 }/*# sourceMappingURL=style.css.map */
