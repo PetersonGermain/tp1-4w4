@@ -8,8 +8,8 @@ function mon_theme_supports() {
   add_theme_support('menus');
   add_theme_support('post-thumbnails');
   add_theme_support('custom-logo', array(
-    'height'      => 150,
-    'width'       => 150,
+    'height'      => 50,
+    'width'       => 50,
     'flex-height' => true,
     'flex-width'  => true,
 ));

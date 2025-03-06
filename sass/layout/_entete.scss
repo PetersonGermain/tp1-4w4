@@ -41,7 +41,6 @@
     @media screen and (max-width: $point_rupture) {
       margin-left: 50%;
     }
-
   }
 
   &__recherche {
@@ -55,4 +54,8 @@
   &__logo {
     z-index: 1;
   }
+}
+
+#menu-principal {
+  gap: 10px;
 }

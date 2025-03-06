@@ -15,8 +15,19 @@ Le composant .carte
     padding: 40px;
   }
 
+  &--grande li {
+    background-color: greenyellow;
+    border: solid greenyellow 1px;
+    border-radius: 5px;
+    padding: 0.5em;
+  }
+
   &--petite {
     padding: 20px;
+  }
+
+  &__image {
+    display: none;
   }
 
   &__image img {
@@ -52,6 +63,15 @@ Le composant .carte
 
     &:hover {
       background-color: #0056b3;
+    }
+  }
+
+  & .post-categories {
+    list-style-type: none;
+    display: flex;
+    gap: 3px;
+    a {
+      text-decoration: none;
     }
   }
 }
