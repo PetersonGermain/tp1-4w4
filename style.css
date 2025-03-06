@@ -76,8 +76,17 @@ Le composant .carte
 .carte--grande {
   padding: 40px;
 }
+.carte--grande li {
+  background-color: greenyellow;
+  border: solid greenyellow 1px;
+  border-radius: 5px;
+  padding: 0.5em;
+}
 .carte--petite {
   padding: 20px;
+}
+.carte__image {
+  display: none;
 }
 .carte__image img {
   max-width: 100%;
@@ -107,6 +116,14 @@ Le composant .carte
 }
 .carte__bouton:hover {
   background-color: #0056b3;
+}
+.carte .post-categories {
+  list-style-type: none;
+  display: flex;
+  gap: 3px;
+}
+.carte .post-categories a {
+  text-decoration: none;
 }
 
 .promotion img {
@@ -261,6 +278,10 @@ Layout
 }
 .entete__logo {
   z-index: 1;
+}
+
+#menu-principal {
+  gap: 10px;
 }
 
 /*
