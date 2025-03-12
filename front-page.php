@@ -7,8 +7,10 @@
 
 <?php get_header() ?>
 <h1>front-page.php</h1>
-    <section class="hero">
-        <div class="hero__contenu global">
+<?php $hero_auteur = get_theme_mod("hero_auteur", "Default Title");?> 
+<?php $hero_background = get_theme_mod("hero_background", "Default Title");?> 
+    <section class="hero" style="background-image: url(<?php echo $hero_background?>);">
+        <div class="hero__contenu global">   
             <h1 class="hero__titre">
                 <?php  bloginfo('name'); ?>
             </h1>
@@ -27,6 +29,7 @@
                 <img src="https://s2.svgbox.net/social.svg?ic=paypal&color=000000" width="20" height="20">
                 <img src="https://s2.svgbox.net/social.svg?ic=stackoverflow&color=000000" width="20" height="20">
             </div>
+            <p>Auteur : <?php echo $hero_auteur = get_theme_mod("hero_auteur", "Default Title");?></p>
         </div>
     </section>
     <section class="galerie">

@@ -159,7 +159,7 @@ Layout
 
 .hero {
   min-height: 100vh;
-  background-image: url("images/maldives.jpg");
+  background-repeat: no-repeat;
 }
 .hero__contenu {
   padding-top: 5rem;
@@ -194,6 +194,12 @@ Layout
 }
 .hero__icone-app {
   margin-top: 1rem;
+}
+.hero__titre, .hero__description, .hero__courriel, .hero__icone-app, .hero p {
+  background-color: rgba(182, 175, 175, 0.7);
+  padding: 0.5em;
+  border-radius: 10px;
+  width: max-content;
 }
 
 .formulaire {

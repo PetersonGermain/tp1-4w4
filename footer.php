@@ -1,7 +1,9 @@
 <footer>
+    <?php $footer_mission = get_theme_mod('footer_mission', 'Default Title'); ?>        
+
     <div class="piedpage global">
-        <h2>Lien sur les voyages</h2>
         <section class="piedpage__s1">
+            <h2>Lien sur les voyages</h2>
                 <?php wp_nav_menu(array(
                     "menu" => "externe",
                     "container" => "nav",
@@ -19,7 +21,8 @@
             </div>
             <div class="piedpage__s1__description">
                 <h2>Notre mission</h2>
-                    <p>Offrir à nos clients des expériences de voyage uniques et inoubliables en leur proposant des services de qualité, adaptés à leurs besoins et à leurs envies, tout en garantissant un excellent rapport qualité-prix</p>
+                    <!-- <p>Offrir à nos clients des expériences de voyage uniques et inoubliables en leur proposant des services de qualité, adaptés à leurs besoins et à leurs envies, tout en garantissant un excellent rapport qualité-prix</p> -->
+                    <?php echo $footer_mission; ?>
             </div>
         </section>
         <section class="piedpage__s2"></section>

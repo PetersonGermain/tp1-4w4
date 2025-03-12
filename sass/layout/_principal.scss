@@ -9,7 +9,7 @@
 
 .hero{
   min-height: 100vh;
-  background-image: url("images/maldives.jpg");
+  background-repeat: no-repeat;
 
   &__contenu {
     padding-top: 5rem;
@@ -46,6 +46,13 @@
 
   &__icone-app {
     margin-top: 1rem;
+  }
+
+  &__titre, &__description, &__courriel, &__icone-app, p {
+    background-color: rgba($color: #b6afaf, $alpha: 0.7);
+    padding: 0.5em;
+    border-radius: 10px;
+    width: max-content;
   }
 }
 
