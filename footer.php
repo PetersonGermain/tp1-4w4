@@ -1,27 +1,36 @@
 <footer>
-    <?php $footer_mission = get_theme_mod('footer_mission', 'Default Title'); ?>        
+    <?php $footer_mission = get_theme_mod('footer_mission', 'Default Title'); ?>
+    <?php $footer_adresse = get_theme_mod('footer_adresse', 'Default Title'); ?>
+    <?php $footer_telephone = get_theme_mod('footer_telephone', 'Default Title'); ?>           
 
     <div class="piedpage global">
         <section class="piedpage__s1">
-            <h2>Lien sur les voyages</h2>
-                <?php wp_nav_menu(array(
-                    "menu" => "externe",
-                    "container" => "nav",
-                    "container_class" => "piedpage__s1__externe"
-                )); ?>
+            <div class="piedpage__s1__liens">
+                <h2>Lien sur les voyages</h2>
+                    <?php wp_nav_menu(array(
+                        "menu" => "externe",
+                        "container" => "nav",
+                        "container_class" => "piedpage__s1__externe"
+                    )); ?>
+            </div>
             <div class="piedpage__s1__adresse">
                 <div class="piedpage__s1__adresse__coord">
                     <h2>Adresse et Recherche</h2>
-                        <p>3800, Sherbrooke est, Montréal, Québec, Canada, H1X 2A2</p>
-                        <p>Tel: (514) 254-7131</p>
+                        <p> <?php echo $footer_adresse = get_theme_mod('footer_adresse', 'Default Title'); ?>  </p>
+                        <p>Tel : <?php echo $footer_telephone = get_theme_mod('footer_telephone', 'Default Title'); ?>  </p>
                 </div>
                 <div class="piedpage__s1__adresse__recherche">
                     <?php get_search_form();   ?>
                 </div>
+                <div class="piedpage__s1__icone-app">
+                <img src="https://s2.svgbox.net/social.svg?ic=facebook&color=000000" width="20" height="20">
+                <img src="https://s2.svgbox.net/social.svg?ic=linkedin&color=000000" width="20" height="20">
+                <img src="https://s2.svgbox.net/social.svg?ic=paypal&color=000000" width="20" height="20">
+                <img src="https://s2.svgbox.net/social.svg?ic=stackoverflow&color=000000" width="20" height="20">
+            </div>
             </div>
             <div class="piedpage__s1__description">
                 <h2>Notre mission</h2>
-                    <!-- <p>Offrir à nos clients des expériences de voyage uniques et inoubliables en leur proposant des services de qualité, adaptés à leurs besoins et à leurs envies, tout en garantissant un excellent rapport qualité-prix</p> -->
                     <?php echo $footer_mission; ?>
             </div>
         </section>

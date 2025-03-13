@@ -72,6 +72,7 @@ Le composant .carte
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  width: 45%;
 }
 .carte--grande {
   padding: 40px;
@@ -94,6 +95,17 @@ Le composant .carte
 }
 .carte__contenu {
   margin-top: 15px;
+}
+.carte__contenu .temperature {
+  border: black dotted 1px;
+  padding: 0.5em;
+  border-radius: 5px;
+}
+.carte__contenu .post-categories {
+  justify-content: center;
+}
+.carte__image, .carte__contenu {
+  justify-items: center;
 }
 .carte__titre {
   font-size: 24px;
@@ -129,6 +141,11 @@ Le composant .carte
 .promotion img {
   width: 228px;
   height: 117px;
+}
+
+.voyagesPopulaires {
+  display: grid;
+  grid-template-columns: auto auto;
 }
 
 .recherche {
@@ -190,16 +207,28 @@ Layout
   border-radius: 10px;
   background-color: rgb(154, 237, 245);
   border: none;
-  font-size: small;
+  font-size: 25px;
+  margin-left: 1em;
 }
 .hero__icone-app {
   margin-top: 1rem;
 }
 .hero__titre, .hero__description, .hero__courriel, .hero__icone-app, .hero p {
-  background-color: rgba(182, 175, 175, 0.7);
+  background-color: rgba(234, 179, 53, 0.7);
   padding: 0.5em;
   border-radius: 10px;
   width: max-content;
+  font-size: 30px;
+}
+.hero__titre {
+  font-size: 50px;
+}
+
+.boiteflex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 10px;
 }
 
 .formulaire {
@@ -316,6 +345,9 @@ footer {
 }
 .piedpage__s1__adresse {
   flex: 0 0 40%;
+}
+.piedpage__s1__icone-app {
+  margin-top: 1em;
 }
 .piedpage__s1__description {
   flex: 1 0 400px;

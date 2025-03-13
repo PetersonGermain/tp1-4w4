@@ -41,7 +41,8 @@
     border-radius: 10px;
     background-color: rgb(154, 237, 245);
     border: none;
-    font-size: small;
+    font-size: 25px;
+    margin-left: 1em;
   }
 
   &__icone-app {
@@ -49,11 +50,24 @@
   }
 
   &__titre, &__description, &__courriel, &__icone-app, p {
-    background-color: rgba($color: #b6afaf, $alpha: 0.7);
+    background-color: rgba($color: #eab335, $alpha: 0.7);
     padding: 0.5em;
     border-radius: 10px;
     width: max-content;
+    font-size: 30px;
   }
+
+  &__titre {
+    font-size: 50px;
+  }
+
+}
+
+.boiteflex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap : 10px;
 }
 
 .formulaire {
