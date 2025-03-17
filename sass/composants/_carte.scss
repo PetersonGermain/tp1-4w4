@@ -10,6 +10,7 @@ Le composant .carte
   display : flex;
   flex-direction: column;
   justify-content: space-between;
+  width: 45%;
 
   &--grande {
     padding: 40px;
@@ -37,6 +38,20 @@ Le composant .carte
 
   &__contenu {
     margin-top: 15px;
+
+    & .temperature {
+      border: black dotted 1px;
+      padding: 0.5em;
+      border-radius: 5px;
+    }
+
+    & .post-categories {
+      justify-content: center;
+    }
+  }
+
+  &__image, &__contenu {
+    justify-items: center;
   }
 
   &__titre {
@@ -80,3 +95,10 @@ Le composant .carte
   width: 228px;
   height: 117px;
 }
+
+.voyagesPopulaires {
+  display: grid;
+  grid-template-columns: auto auto;
+  
+}
+
