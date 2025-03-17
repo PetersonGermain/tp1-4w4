@@ -5,34 +5,48 @@
 footer{
     background-color: rgb(236, 136, 13); //Devrait devenir une variable de couleur
     color : #000; //Devrait devenir une variable de couleur
-  }
+}
   
-  .piedpage{
-      display: flex;
-      flex-direction: column;
-      &__s1{
-          display: flex;
-          flex-wrap: wrap;
-          gap: 3rem;
-          &__externe {
-              flex : 0 0 20%;
-              & .menu { //ul
-                  display : flex;
-                  flex-direction: column;
-              }
+.piedpage{
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    &__s1{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 3rem;
+        justify-content: center;
+        &__externe {
+            flex : 0 0 20%;
+            & .menu { //ul
+                display : flex;
+                flex-direction: column;
+            }
   
   
-          }
-          &__adresse{
-              flex : 0 0 40%;
-              &__coord{}
-              &__recherche{}
-          }
-          &__icone-app {
+        }
+        &__adresse{
+            flex : 0 0 40%;
+            justify-items: center;
+            &__coord{}
+            &__recherche{}
+        }
+        &__adresse p {
+            justify-self: center;
+        }
+        &__icone-app {
             margin-top: 1em;
-          }
-          &__description{
-              flex:1 0 400px;
-          }
-      }
-  }
+        }
+        &__description{
+            width: 25%;
+        }
+
+        &__liens {
+            justify-items: center;
+        }
+    }
+}
+
+.piedpage h2 {
+    justify-self: center;
+}
