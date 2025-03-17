@@ -292,6 +292,7 @@ Layout
     right: 0;
     background-color: white;
     width: 100%;
+    padding-top: 50px;
   }
 }
 .entete__menu {
@@ -360,6 +361,13 @@ footer {
 }
 .piedpage__s1__liens {
   justify-items: center;
+}
+.piedpage__s2 {
+  padding: 1.5em;
+  justify-items: center;
+}
+.piedpage__s2 li {
+  padding: 10px;
 }
 
 .piedpage h2 {

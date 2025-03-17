@@ -34,7 +34,15 @@
                 </div>
             </div>
         </section>
-        <section class="piedpage__s2"></section>
+        <section class="piedpage__s2">
+            <div class="piedpage__s2__nav">
+                <?php wp_nav_menu(array(
+                    'menu' => 'principal',
+                    'container' => 'nav',
+                    'container_class' => 'entete__menu',
+                )); ?>
+            </div>
+        </section>
         <section class="piedpage__s3"></section>
     </div>
 </footer>

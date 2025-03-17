@@ -19,6 +19,8 @@
           <a href="" class="hero__courriel">
             <?php echo $hero_courriel = get_theme_mod("hero_courriel", "Default Title");?>
           </a>
+          <p> <?php echo $footer_adresse = get_theme_mod('footer_adresse', 'Default Title'); ?>  </p>
+          <p>Tel : <?php echo $footer_telephone = get_theme_mod('footer_telephone', 'Default Title'); ?>  </p>
           <button class="hero__bouton">
             Inscription
           </button>
