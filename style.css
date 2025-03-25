@@ -166,6 +166,11 @@ Le composant .carte
   border-left: 1px dotted rgba(0, 0, 0, 0.2);
 }
 
+.erreur {
+  display: flex;
+  justify-content: center;
+}
+
 /* //////////////////
 Layout
 //////////////////// */
