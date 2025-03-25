@@ -168,7 +168,12 @@ Le composant .carte
 
 .erreur {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  border: 1px black solid;
+}
+.erreur__titre {
+  font-size: 80px;
 }
 
 /* //////////////////

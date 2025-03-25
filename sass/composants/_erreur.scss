@@ -1,4 +1,10 @@
 .erreur {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  border: 1px black solid;
+
+  &__titre {
+    font-size: 80px;
+  }
 }
