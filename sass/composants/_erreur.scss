@@ -3,8 +3,25 @@
   flex-direction: column;
   text-align: center;
   border: 1px black solid;
+  background-color: rgba($color: #007efc, $alpha: 0.5);
+  box-shadow: 0px 0px 10px black;
+  margin-bottom: 2em;
 
   &__titre {
     font-size: 80px;
   }
+
+  &__description {
+    font-size: 40px;
+  }
+
+  &__icones {
+    padding-bottom: 2em;
+  }
+
+}
+
+.erreur ~ nav {
+  display: flex;
+  flex-direction: column;
 }

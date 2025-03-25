@@ -108,6 +108,18 @@ function theme_31w_customize_register($wp_customize) {
     'title' => __('Error Section', 'theme_31w'),
     'priority' => 30,
   ));
+
+  ///////////////////////////////////////////////////////// La couleur du titre
+  $wp_customize->add_setting('erreurTitre_couleur', array(
+    'default' => __('', 'theme_31w'),
+    'sanitize_callback' => 'esc_url_raw'
+  ));
+
+  $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'erreurTitre_couleur', array(
+    'label' => __('Couleur du titre', 'theme_31w'),
+    'section' => 'erreur_section',
+  )));
+
   ///////////////////////////////////////////////////////// La description de l'erreur
   $wp_customize->add_setting('erreur_description', array(
     'default' => __('Erreur', 'theme_31w'),
