@@ -19,9 +19,16 @@
     padding-bottom: 2em;
   }
 
+  &__recommandation {
+    font-size: 35px;
+  }
+
+  & .menu {
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+    padding-bottom: 2em;
+  }
+
 }
 
-.erreur ~ nav {
-  display: flex;
-  flex-direction: column;
-}

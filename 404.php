@@ -18,7 +18,7 @@
     <img src="https://s2.svgbox.net/social.svg?ic=paypal&color=000000" width="40" height="40">
     <img src="https://s2.svgbox.net/social.svg?ic=stackoverflow&color=000000" width="40" height="40">
   </div>
-  <p>Cherchez-vous plutôt : </p>
+  <p class="erreur__recommandation">Cherchez-vous plutôt : </p>
   <?php wp_nav_menu(array(
     "menu" => "destinations",
     "container" => "nav",

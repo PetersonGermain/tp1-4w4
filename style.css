@@ -184,10 +184,14 @@ Le composant .carte
 .erreur__icones {
   padding-bottom: 2em;
 }
-
-.erreur ~ nav {
+.erreur__recommandation {
+  font-size: 35px;
+}
+.erreur .menu {
   display: flex;
   flex-direction: column;
+  font-size: 20px;
+  padding-bottom: 2em;
 }
 
 /* //////////////////
