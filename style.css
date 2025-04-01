@@ -175,26 +175,82 @@ Le composant .carte
   background-size: cover;
   box-shadow: 0px 0px 10px black;
   margin-bottom: 2em;
+  margin-top: 3em;
 }
 .erreur__titre {
-  font-size: 60px;
+  font-size: 45px;
   background-color: rgba(209, 208, 208, 0.2);
+  width: fit-content;
+  padding: 0.5em;
+  margin: 2% 25%;
 }
 .erreur__description {
   font-size: 20px;
   background-color: rgba(209, 208, 208, 0.2);
+  width: fit-content;
+  padding: 0.5em;
+  margin: 2% 25%;
 }
-.erreur__icones {
-  padding-bottom: 2em;
-}
-.erreur__recommandation {
-  font-size: 35px;
+.erreur__bouton {
+  font-size: 30px;
+  font-weight: bold;
+  background-color: yellow;
+  color: rgb(0, 83, 227);
+  text-align: center;
+  width: fit-content;
+  margin: 2% 25%;
+  border-radius: 5px;
 }
 .erreur .menu {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-areas: "menu-item-213 menu-item-213" "menu-item-227 menu-item-228" "menu-item-229 menu-item-229";
+  grid-template-columns: 1fr 1fr;
   font-size: 20px;
-  padding-bottom: 2em;
+  padding: 5px;
+  gap: 10px;
+}
+.erreur .menu #menu-item-213 {
+  grid-area: menu-item-213;
+  text-align: center;
+  background-color: yellow;
+  width: 50%;
+  margin: auto auto;
+  padding: 0.5em;
+  border-radius: 5px;
+}
+.erreur .menu #menu-item-227 {
+  grid-area: menu-item-227;
+  background-color: yellow;
+  width: 50%;
+  margin: auto auto;
+  padding: 0.5em;
+  border-radius: 5px;
+}
+.erreur .menu #menu-item-228 {
+  grid-area: menu-item-228;
+  background-color: yellow;
+  width: 50%;
+  margin: auto auto;
+  padding: 0.5em;
+  border-radius: 5px;
+}
+.erreur .menu #menu-item-229 {
+  grid-area: menu-item-229;
+  text-align: center;
+  background-color: yellow;
+  width: 50%;
+  margin: auto auto;
+  padding: 0.5em;
+  border-radius: 5px;
+}
+.erreur__recherche input[type=text] {
+  border-bottom: 3px solid rgb(238, 255, 0);
+  background: none;
+  font-size: 20px;
+  color: yellow;
+}
+.erreur__recherche input::placeholder {
+  color: yellow;
 }
 
 /* //////////////////
