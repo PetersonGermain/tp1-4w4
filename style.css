@@ -171,15 +171,18 @@ Le composant .carte
   flex-direction: column;
   text-align: center;
   border: 1px black solid;
-  background-color: rgba(0, 126, 252, 0.5);
+  background-repeat: no-repeat;
+  background-size: cover;
   box-shadow: 0px 0px 10px black;
   margin-bottom: 2em;
 }
 .erreur__titre {
-  font-size: 80px;
+  font-size: 60px;
+  background-color: rgba(209, 208, 208, 0.2);
 }
 .erreur__description {
-  font-size: 40px;
+  font-size: 20px;
+  background-color: rgba(209, 208, 208, 0.2);
 }
 .erreur__icones {
   padding-bottom: 2em;
