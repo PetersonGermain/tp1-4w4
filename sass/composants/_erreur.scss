@@ -30,7 +30,7 @@
   &__bouton {
     font-size: 30px;
     font-weight: bold;
-    background-color: yellow;
+    background-color: $erreurBoutons_couleur;
     color: rgb(0, 83, 227);
     text-align: center;
     border-radius: 5px;
@@ -54,16 +54,17 @@
     #menu-item-213 {
       grid-area: menu-item-213;
       text-align: center;
-      background-color: yellow;
+      background-color: $erreurBoutons_couleur;
       width: 50%;
       margin: auto auto;
       padding: 0.5em;
       border-radius: 5px;
+
     }
 
     #menu-item-227 {
       grid-area: menu-item-227;
-      background-color: yellow;
+      background-color: $erreurBoutons_couleur;
       width: 50%;
       margin: auto auto;
       padding: 0.5em;
@@ -72,7 +73,7 @@
 
     #menu-item-228 {
       grid-area: menu-item-228;
-      background-color: yellow;
+      background-color: $erreurBoutons_couleur;
       width: 50%;
       margin: auto auto;
       padding: 0.5em;
@@ -81,7 +82,7 @@
     #menu-item-229 {
       grid-area: menu-item-229;
       text-align: center;
-      background-color: yellow;
+      background-color: $erreurBoutons_couleur;
       width: 50%;
       margin: auto auto;
       padding: 0.5em;

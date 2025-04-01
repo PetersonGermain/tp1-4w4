@@ -120,6 +120,17 @@ function theme_31w_customize_register($wp_customize) {
     'section' => 'erreur_section',
   )));
 
+  ///////////////////////////////////////////////////////// La couleur des boutons
+  $wp_customize->add_setting('erreurBoutons_couleur', array(
+    'default' => __('', 'theme_31w'),
+    'sanitize_callback' => 'esc_url_raw'
+  ));
+  
+  $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'erreurBoutons_couleur', array(
+    'label' => __('Couleur des boutons', 'theme_31w'),
+    'section' => 'erreur_section',
+  )));
+
   ///////////////////////////////////////////////////////// Le titre
   $wp_customize->add_setting('erreur_titre', array(
     'default' => __('Erreur 404', 'theme_31w'),
