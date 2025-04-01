@@ -120,6 +120,18 @@ function theme_31w_customize_register($wp_customize) {
     'section' => 'erreur_section',
   )));
 
+  ///////////////////////////////////////////////////////// Le titre
+  $wp_customize->add_setting('erreur_titre', array(
+    'default' => __('Erreur 404', 'theme_31w'),
+    'sanitize_callback' => 'sanitize_text_field'
+  ));
+  
+  $wp_customize->add_control('erreur_titre', array(
+    'label' => __('Titre', 'theme_31w'),
+    'section' => 'erreur_section',
+    'type' => 'text',
+  ));
+
   ///////////////////////////////////////////////////////// La description de l'erreur
   $wp_customize->add_setting('erreur_description', array(
     'default' => __('Erreur', 'theme_31w'),
