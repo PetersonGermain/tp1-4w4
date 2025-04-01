@@ -19,7 +19,7 @@
     <img src="https://s2.svgbox.net/social.svg?ic=paypal&color=000000" width="40" height="40">
     <img src="https://s2.svgbox.net/social.svg?ic=stackoverflow&color=000000" width="40" height="40">
   </div> -->
-  <a href="https://gftnth00.mywhc.ca/4w4_33/" class="erreur__bouton">Retour à l'accueil</p>
+  <div><a href="https://gftnth00.mywhc.ca/4w4_33/" class="erreur__bouton">Retour à l'accueil</p></div>
   <?php wp_nav_menu(array(
     "menu" => "destinations",
     "container" => "nav",
