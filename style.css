@@ -196,7 +196,6 @@ Le composant .carte
 .erreur__bouton {
   font-size: 30px;
   font-weight: bold;
-  background-color: yellow;
   color: rgb(0, 83, 227);
   text-align: center;
   border-radius: 5px;
@@ -212,7 +211,6 @@ Le composant .carte
 .erreur .menu #menu-item-213 {
   grid-area: menu-item-213;
   text-align: center;
-  background-color: yellow;
   width: 50%;
   margin: auto auto;
   padding: 0.5em;
@@ -220,7 +218,6 @@ Le composant .carte
 }
 .erreur .menu #menu-item-227 {
   grid-area: menu-item-227;
-  background-color: yellow;
   width: 50%;
   margin: auto auto;
   padding: 0.5em;
@@ -228,7 +225,6 @@ Le composant .carte
 }
 .erreur .menu #menu-item-228 {
   grid-area: menu-item-228;
-  background-color: yellow;
   width: 50%;
   margin: auto auto;
   padding: 0.5em;
@@ -237,7 +233,6 @@ Le composant .carte
 .erreur .menu #menu-item-229 {
   grid-area: menu-item-229;
   text-align: center;
-  background-color: yellow;
   width: 50%;
   margin: auto auto;
   padding: 0.5em;
@@ -281,6 +276,61 @@ Le composant .carte
     margin: auto auto;
   }
 }
+.categorie__ul {
+  list-style-type: none;
+  display: flex;
+  gap: 2em;
+  justify-content: center;
+  width: 100%;
+}
+.categorie__ul__li {
+  background-color: aqua;
+  border-radius: 5px;
+  padding: 1em;
+}
+.categorie__ul__li:hover {
+  cursor: pointer;
+  background-color: rgb(0, 145, 255);
+}
+
+.destination {
+  margin-left: 15em;
+}
+.destination__list .titre {
+  background-color: aqua;
+  border-radius: 5px;
+  padding: 1em;
+  width: fit-content;
+}
+.destination__list p, .destination a {
+  max-height: 0;
+  opacity: 0;
+}
+.destination__checkbox {
+  display: none;
+}
+.destination__checkbox:checked ~ p, .destination__checkbox:checked ~ a {
+  animation: apparait 2s linear forwards;
+}
+
+@keyframes apparait {
+  0% {
+    max-height: 0;
+    opacity: 0;
+  }
+  100% {
+    max-height: 100%;
+    opacity: 1;
+  }
+}
+label {
+  cursor: pointer;
+}
+
+.click {
+  background-color: rgb(0, 145, 255);
+}
+
 /* //////////////////
 Layout
 //////////////////// */
@@ -487,4 +537,15 @@ footer {
 
 .piedpage h2 {
   justify-self: center;
+}
+
+.hero {
+  min-height: 100vh;
+  background-repeat: no-repeat;
+}
+.hero__carrousel {
+  top: 0;
+  position: absolute;
+  background-repeat: no-repeat;
+  min-height: 100vh;
 }/*# sourceMappingURL=style.css.map */

@@ -7,8 +7,13 @@
 <?php $hero_courriel = get_theme_mod("hero_courriel", "Default Title");?>
 <?php $hero_background = get_theme_mod("hero_background", "Default Title");?> 
 <?php $hero_couleur = get_theme_mod("hero_couleur", "#fff");?>
+    <!-- /////////////////////////////////////////////////////////////////////////hero__caroussel -->
+    <section class="hero">
+    <div class="hero__carrousel" style="background-image: url(<?php echo $hero_background?>);"></div>
+    <div class="hero__carrousel" style="background-image: url(<?php echo $hero_background?>);"></div>
+    <div class="hero__carrousel" style="background-image: url(<?php echo $hero_background?>);"></div>
 
-    <section class="hero" style="background-image: url(<?php echo $hero_background?>);">
+    <!-- /////////////////////////////////////////////////////////////////////////hero__contenu -->
       <div class="hero__contenu global" style="color:<?php echo $hero_couleur = get_theme_mod("hero_couleur", "#fff");?>">   
           <h1 class="hero__titre">
             <?php  bloginfo('name'); ?>
