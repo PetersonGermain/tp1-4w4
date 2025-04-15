@@ -32,11 +32,11 @@ wp_enqueue_style('main-style', get_stylesheet_uri());
   );
 
   wp_enqueue_script(
-    'destination_restapi',
-    get_template_directory_uri() . '/js/caroussel.js',
+    'carrousel.js',
+    get_template_directory_uri() . '/js/carrousel.js',
     array(),
     filemtime(get_template_directory() . 
-    '/js/caroussel.js'),
+    '/js/carrousel.js'),
     true
   );
 }

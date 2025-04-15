@@ -5,13 +5,20 @@
 ?>
 <?php $hero_auteur = get_theme_mod("hero_auteur", "Default Title");?>
 <?php $hero_courriel = get_theme_mod("hero_courriel", "Default Title");?>
-<?php $hero_background = get_theme_mod("hero_background", "Default Title");?> 
+<?php for ($k=0; $k<3; $k++){
+$hero_background[$k] = get_theme_mod('hero_background_' . $k, 'Default Title');} ?>
 <?php $hero_couleur = get_theme_mod("hero_couleur", "#fff");?>
     <!-- /////////////////////////////////////////////////////////////////////////hero__caroussel -->
     <section class="hero">
-    <div class="hero__carrousel" style="background-image: url(<?php echo $hero_background?>);"></div>
-    <div class="hero__carrousel" style="background-image: url(<?php echo $hero_background?>);"></div>
-    <div class="hero__carrousel" style="background-image: url(<?php echo $hero_background?>);"></div>
+        <div class="hero__carrousel" style="background-image: url(<?php echo $hero_background[0] ?>)"></div>
+        <div class="hero__carrousel" style="background-image: url(<?php echo $hero_background[1] ?>)"></div>
+        <div class="hero__carrousel" style="background-image: url(<?php echo $hero_background[2] ?>)"></div>
+
+        <div class="hero__radio">
+            <input class="hero__radio__input" data-id_carrousel="0" type="radio" name="carroussel"  checked="checked">
+            <input class="hero__radio__input" data-id_carrousel="1" type="radio" name="carroussel">
+            <input class="hero__radio__input" data-id_carrousel="2" type="radio" name="carroussel">
+        </div>
 
     <!-- /////////////////////////////////////////////////////////////////////////hero__contenu -->
       <div class="hero__contenu global" style="color:<?php echo $hero_couleur = get_theme_mod("hero_couleur", "#fff");?>">   
