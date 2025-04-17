@@ -22,5 +22,20 @@
     })
   })
 
+  let currentIndex = 0;
+  setInterval(() => {
+    hero_carrousel.forEach(image => {
+      image.classList.remove("hero__carrousel--active");
+    });
+
+    hero_carrousel[currentIndex].classList.add("hero__carrousel--active");
+
+    if (hero__radio__input[currentIndex]) {
+      hero__radio__input[currentIndex].checked = true;
+    }
+
+    currentIndex = (currentIndex + 1) % hero_carrousel.length;
+  }, 5000);
+
 
   })()

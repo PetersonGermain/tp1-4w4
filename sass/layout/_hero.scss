@@ -13,6 +13,7 @@
     min-height: 100vh;
     z-index: -1;
     opacity: 0;
+    transition: opacity 1s ease-in-out;
 
     &--active { // .hero__carrousel--active
       opacity: 1;

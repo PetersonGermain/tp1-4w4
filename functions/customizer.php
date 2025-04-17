@@ -29,7 +29,6 @@ function theme_31w_customize_register($wp_customize) {
     ));
 
   /////////////////////////////////////////////////////////// Image en background de la zone héro
-////////////////////////////////////////////////// image en background de la zone hero
 for ($k=0; $k<3; $k++)
 {
   $wp_customize->add_setting('hero_background_' . $k, array(
@@ -107,6 +106,17 @@ for ($k=0; $k<3; $k++)
     'section' => 'footer_section',
     'type' => 'text',
   ));
+
+    ///////////////////////////////////////////////////////// La couleur du footer
+    $wp_customize->add_setting('footer_couleur', array(
+      'default' => __('', 'theme_31w'),
+      'sanitize_callback' => 'esc_url_raw'
+    ));
+    
+    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'footer_couleur', array(
+      'label' => __('Couleur du footer', 'theme_31w'),
+      'section' => 'footer_section',
+    )));  
 
   ////////////////////////////////////////////////////////////////////// Nouvelle section erreur
   $wp_customize->add_section('erreur_section', array(
