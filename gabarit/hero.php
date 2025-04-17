@@ -10,9 +10,9 @@ $hero_background[$k] = get_theme_mod('hero_background_' . $k, 'Default Title');}
 <?php $hero_couleur = get_theme_mod("hero_couleur", "#fff");?>
     <!-- /////////////////////////////////////////////////////////////////////////hero__caroussel -->
     <section class="hero">
-        <div class="hero__carrousel" style="background-image: url(<?php echo $hero_background[0] ?>)"></div>
-        <div class="hero__carrousel" style="background-image: url(<?php echo $hero_background[1] ?>)"></div>
-        <div class="hero__carrousel" style="background-image: url(<?php echo $hero_background[2] ?>)"></div>
+        <div class="hero__carrousel hero__carrousel--active" data-id_carrousel="0" style="background-image: url(<?php echo $hero_background[0] ?>)"></div>
+        <div class="hero__carrousel" data-id_carrousel="1" style="background-image: url(<?php echo $hero_background[1] ?>)"></div>
+        <div class="hero__carrousel" data-id_carrousel="2" style="background-image: url(<?php echo $hero_background[2] ?>)"></div>
 
         <div class="hero__radio">
             <input class="hero__radio__input" data-id_carrousel="0" type="radio" name="carroussel"  checked="checked">
