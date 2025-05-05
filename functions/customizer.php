@@ -29,7 +29,24 @@ function theme_31w_customize_register($wp_customize) {
     ));
 
   /////////////////////////////////////////////////////////// Image en background de la zone héro
-for ($k=0; $k<3; $k++)
+$wp_customize->add_setting('hero_carrousel_count', array(
+  'default' => 3,
+  'sanitize_callback' => 'absint',
+));
+
+$wp_customize->add_control('hero_carrousel_count', array(
+  'label' => __('Nombre d’images du carrousel', 'theme_31w'),
+  'section' => 'hero_section',
+  'type' => 'number',
+  'input_attrs' => array(
+    'min' => 1,
+    'max' => 10,
+  ),
+));
+
+$carrousel_count = get_theme_mod('hero_carrousel_count', 3);
+
+for ($k=0; $k<$carrousel_count; $k++)
 {
   $wp_customize->add_setting('hero_background_' . $k, array(
     'default' => '',

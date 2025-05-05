@@ -569,4 +569,28 @@ footer {
   display: flex;
   justify-content: center;
   gap: 2rem;
+}
+
+.hero__animation {
+  display: none;
+}
+.hero__animation--active {
+  display: block;
+}
+.hero__titre, .hero__description {
+  position: relative;
+  animation: anim_contenu 2s cubic-bezier(0.91, -0.59, 0.19, 1.59) forwards;
+}
+.hero__titre {
+  transform: translateY(-1000px);
+}
+.hero__description {
+  transform: translateX(-1000px);
+  animation-delay: 2s;
+}
+
+@keyframes anim_contenu {
+  100% {
+    transform: translateY(0);
+  }
 }/*# sourceMappingURL=style.css.map */
