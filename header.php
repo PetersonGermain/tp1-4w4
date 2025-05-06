@@ -7,6 +7,7 @@
     <!-- link rel="stylesheet" href="normalize.css" -->
     <!-- link rel="stylesheet" href="style.css" -->
     <?php wp_head(); ?> 
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Italiana&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>

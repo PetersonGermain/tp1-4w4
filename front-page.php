@@ -24,9 +24,10 @@
                         <?php } ?>
                         <?php endwhile; endif; ?>
         </div>
+
     </section>
     <!-- /////////////////////////// destination REST -API !-->
-     <?php categories_liste("destination"); ?>
+     <?php categorie_par_destination("populaire"); ?>
     <section class="destination">
         <h2 class="destination__titre">Articles de la catégorie</h2>
         <div class="destination__list"></div>
