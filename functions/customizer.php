@@ -82,6 +82,51 @@ for ($k=0; $k<$carrousel_count; $k++)
     'section' => 'hero_section',
   )));  
 
+     ////////////////////////////////////////////////////////////////////// Icônes de héro
+  $wp_customize->add_setting('hero_svg_icone_url', array(
+    'default' => '',
+    'sanitize_callback' => 'esc_url_raw'
+  ));
+
+  $wp_customize->add_control('hero_svg_icone_url', array(
+    'label' => __('Lien de l’icône SVG du footer', 'theme_31w'),
+    'section' => 'hero_section',
+    'type' => 'url',
+  ));
+
+    $wp_customize->add_setting('hero_svg_icone_url2', array(
+    'default' => '',
+    'sanitize_callback' => 'esc_url_raw'
+  ));
+
+  $wp_customize->add_control('hero_svg_icone_url2', array(
+    'label' => __('Lien de l’icône SVG2 du footer', 'theme_31w'),
+    'section' => 'hero_section',
+    'type' => 'url',
+  ));
+
+  $wp_customize->add_setting('hero_svg_icone_url3', array(
+    'default' => '',
+    'sanitize_callback' => 'esc_url_raw'
+  ));
+
+  $wp_customize->add_control('hero_svg_icone_url3', array(
+    'label' => __('Lien de l’icône SVG3 du footer', 'theme_31w'),
+    'section' => 'hero_section',
+    'type' => 'url',
+  ));
+
+    $wp_customize->add_setting('hero_svg_icone_url4', array(
+    'default' => '',
+    'sanitize_callback' => 'esc_url_raw'
+  ));
+
+  $wp_customize->add_control('hero_svg_icone_url4', array(
+    'label' => __('Lien de l’icône SVG4 du footer', 'theme_31w'),
+    'section' => 'hero_section',
+    'type' => 'url',
+  ));
+
   ////////////////////////////////////////////////////////////////////// Nouvelle section footer
   $wp_customize->add_section('footer_section', array(
     'title' => __('Section pied de page', 'theme_31w'),
@@ -112,28 +157,74 @@ for ($k=0; $k<$carrousel_count; $k++)
     'type' => 'text',
   ));
 
-  ////////////////////////////////////////////////////////////////////// Le téléphone
-  $wp_customize->add_setting('footer_telephone', array(
-    'default' => __('(514) 254-7131', 'theme_31w'),
+
+   ////////////////////////////////////////////////////////////////////// Icônes du footer
+  $wp_customize->add_setting('footer_svg_icone_url', array(
+    'default' => '',
+    'sanitize_callback' => 'esc_url_raw'
+  ));
+
+  $wp_customize->add_control('footer_svg_icone_url', array(
+    'label' => __('Lien de l’icône SVG du footer', 'theme_31w'),
+    'section' => 'footer_section',
+    'type' => 'url',
+  ));
+
+    $wp_customize->add_setting('footer_svg_icone_url2', array(
+    'default' => '',
+    'sanitize_callback' => 'esc_url_raw'
+  ));
+
+  $wp_customize->add_control('footer_svg_icone_url2', array(
+    'label' => __('Lien de l’icône SVG2 du footer', 'theme_31w'),
+    'section' => 'footer_section',
+    'type' => 'url',
+  ));
+
+  $wp_customize->add_setting('footer_svg_icone_url3', array(
+    'default' => '',
+    'sanitize_callback' => 'esc_url_raw'
+  ));
+
+  $wp_customize->add_control('footer_svg_icone_url3', array(
+    'label' => __('Lien de l’icône SVG3 du footer', 'theme_31w'),
+    'section' => 'footer_section',
+    'type' => 'url',
+  ));
+
+    $wp_customize->add_setting('footer_svg_icone_url4', array(
+    'default' => '',
+    'sanitize_callback' => 'esc_url_raw'
+  ));
+
+  $wp_customize->add_control('footer_svg_icone_url4', array(
+    'label' => __('Lien de l’icône SVG4 du footer', 'theme_31w'),
+    'section' => 'footer_section',
+    'type' => 'url',
+  ));
+  ///////////////////////////////////////////////////////// La couleur du footer
+  $wp_customize->add_setting('footer_couleur', array(
+    'default' => __('', 'theme_31w'),
+    'sanitize_callback' => 'esc_url_raw'
+  ));
+    
+  $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'footer_couleur', array(
+    'label' => __('Couleur du footer', 'theme_31w'),
+    'section' => 'footer_section',
+  )));
+  
+  ///////////////////////////////////////////////////////// Icônes téléphone
+  $wp_customize->add_setting('footer_icone_telephone', array(
+    'default' => 'fas fa-phone',
     'sanitize_callback' => 'sanitize_text_field'
   ));
 
-  $wp_customize->add_control('footer_telephone', array(
-    'label' => __('Telephone', 'theme_31w'),
+  $wp_customize->add_control('footer_icone_telephone', array(
+    'label' => __('Icône du téléphone (ex: fas fa-phone)', 'theme_31w'),
     'section' => 'footer_section',
     'type' => 'text',
   ));
 
-    ///////////////////////////////////////////////////////// La couleur du footer
-    $wp_customize->add_setting('footer_couleur', array(
-      'default' => __('', 'theme_31w'),
-      'sanitize_callback' => 'esc_url_raw'
-    ));
-    
-    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'footer_couleur', array(
-      'label' => __('Couleur du footer', 'theme_31w'),
-      'section' => 'footer_section',
-    )));  
 
   ////////////////////////////////////////////////////////////////////// Nouvelle section erreur
   $wp_customize->add_section('erreur_section', array(

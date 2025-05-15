@@ -5,6 +5,8 @@ html {
 .global {
   margin : 0 auto;
   max-width: 1100px;
+  display: flex;
+  flex-direction: column;
 }
 
 .hero{
@@ -42,14 +44,17 @@ html {
     background-color: rgb(154, 237, 245);
     border: none;
     font-size: 25px;
-    margin-left: 1em;
+    align-self: center;
+    margin-left: -35em;
   }
 
-  &__icone-app {
-    margin-top: 1rem;
+  &__icone {
+    width: 20px;
+    height: 20px;
+    align-content: center;
   }
 
-  &__titre, &__description, &__courriel, &__icone-app, p {
+  &__titre, &__description, &__courriel, &__icone, p {
     background-color: rgba($color: #eab335, $alpha: 0.7);
     padding: 0.5em;
     border-radius: 10px;
@@ -61,6 +66,14 @@ html {
     font-size: 50px;
   }
 
+}
+
+.icones {
+  margin-top: 0.5em;
+}
+
+.telephone {
+  margin-top: -0.5em;
 }
 
 .boiteflex {

@@ -58,4 +58,12 @@ function modifie_requete_principal( $query ) {
     $query->set( 'order', 'ASC' );
     }
    }
-   add_action( 'pre_get_posts', 'modifie_requete_principal' );
+
+   function theme_31w_allow_svg_uploads($mimes) {
+    $mimes['svg'] = 'image/svg+xml';
+    return $mimes;
+}
+add_filter('upload_mimes', 'theme_31w_allow_svg_uploads');
+
+
+add_action( 'pre_get_posts', 'modifie_requete_principal' );
