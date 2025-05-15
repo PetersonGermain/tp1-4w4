@@ -15,6 +15,8 @@
                 the_post_thumbnail(); ?>
                 <h2 class="populaire__titre"><?php the_title(); ?></h2>
                 <div class="populaire__contenu"><?php the_content(); ?></div>
+                <?php the_category() ?>
+                <p>Auteur : <?php echo $hero_auteur = get_theme_mod("hero_auteur", "Default Title");?></p>
             </article>
             <?php endwhile; endif; ?>
         </div>

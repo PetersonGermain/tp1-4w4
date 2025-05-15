@@ -5,14 +5,13 @@ html {
 .global {
   margin : 0 auto;
   max-width: 1100px;
-  display: flex;
-  flex-direction: column;
 }
 
 .hero{
   min-height: 100vh;
   background-repeat: no-repeat;
-
+  display: flex;
+  flex-direction: column;
   &__contenu {
     padding-top: 2rem;
     @media screen and (max-width: $point_rupture) {
@@ -45,7 +44,6 @@ html {
     border: none;
     font-size: 25px;
     align-self: center;
-    margin-left: -35em;
   }
 
   &__icone {
