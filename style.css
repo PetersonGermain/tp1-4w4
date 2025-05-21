@@ -350,6 +350,7 @@ Layout
 //////////////////// */
 html {
   font-family: "Exo 2";
+  background-image: url(../theme-tp/images/plane.jpg);
 }
 
 .global {
