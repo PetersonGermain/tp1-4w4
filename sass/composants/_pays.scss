@@ -26,10 +26,21 @@ h1 {
 
 .pays p {
   background-color: #00f2fe;
+  padding: 0.5em;
   border-radius: 5px;
   text-align: center;
 }
 
 .pays p:hover {
   cursor: pointer;
+  background-color: #4facfe;
 }
+
+.pays_destinations li {
+  text-decoration: none;
+}
+
+.pays_destinations {
+  background-image: linear-gradient(#00f2fe, #4facfe);
+}
+
