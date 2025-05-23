@@ -18,6 +18,41 @@ function créer_vague($couleur_haut, $couleur_bas) {
 }
 ?>
 
+<?php
+function trouver_articles_par_mot($mot_cle, $id_post_actuel = 0) {
+  // Requête pour rechercher un mot dans le titre
+  $args = array(
+    'post_type' => 'post',
+    'post_status' => 'publish',
+    'posts_per_page' => -1,
+    'post__not_in' => array($id_post_actuel),
+    's' => $mot_cle, // Recherche dans le titre + contenu
+  );
+
+  $query = new WP_Query($args);
+
+  if ($query->have_posts()) {
+    echo '<ul class="articles__meme__mot">';
+    while ($query->have_posts()) {
+      $query->the_post();
+
+      // Vérifie que le mot est bien dans le titre, pas seulement le contenu
+      if (stripos(get_the_title(), $mot_cle) !== false) {
+        echo '<li class="' . esc_attr($mot_cle) . '"><a href="' . get_permalink() . '">' . get_the_title() . '</a></li>';
+
+      }
+    }
+    echo '</ul>';
+  } else {
+    echo 'Aucun article trouvé contenant le mot : "' . esc_html($mot_cle) . '".';
+  }
+
+  wp_reset_postdata();
+}
+?>
+
+
+
 <?php get_header() ?>
   <!-- <h1>template-pays.php</h1> -->
   <section class="intro">
@@ -48,4 +83,19 @@ function créer_vague($couleur_haut, $couleur_bas) {
       <p>Mexique</p>
       <p>Suisse</p>
   </section>
+
+  <?php trouver_articles_par_mot("Argentine", get_the_ID()) ?>;
+  <?php trouver_articles_par_mot("Belgique", get_the_ID()) ?>;
+  <?php trouver_articles_par_mot("Canada", get_the_ID()) ?>;
+  <?php trouver_articles_par_mot("Chili", get_the_ID()) ?>;
+  <?php trouver_articles_par_mot("Chine", get_the_ID()) ?>;
+  <?php trouver_articles_par_mot("États-Unis", get_the_ID()) ?>;
+  <?php trouver_articles_par_mot("France", get_the_ID()) ?>;
+  <?php trouver_articles_par_mot("Grèce", get_the_ID()) ?>;
+  <?php trouver_articles_par_mot("Islande", get_the_ID()) ?>;
+  <?php trouver_articles_par_mot("Italie", get_the_ID()) ?>;
+  <?php trouver_articles_par_mot("Japon", get_the_ID()) ?>;
+  <?php trouver_articles_par_mot("Maroc", get_the_ID()) ?>;
+  <?php trouver_articles_par_mot("Mexique", get_the_ID()) ?>;
+  <?php trouver_articles_par_mot("Suisse", get_the_ID()) ?>;
 <?php get_footer(); ?>
