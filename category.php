@@ -5,7 +5,7 @@
  */
 ?>
 <?php get_header() ?>
-<h1>category.php</h1>
+<!-- <h1>category.php</h1> -->
 <h1><?php single_cat_title();?></h1>
 <p> <?php echo category_description() ?> </p>
     <section class="populaire">

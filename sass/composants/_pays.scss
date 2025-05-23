@@ -1,0 +1,35 @@
+h1 {
+  text-align: center;
+}
+
+.intro {
+  background-image: linear-gradient(#00f2fe, #4facfe);
+}
+
+.intro p {
+  width: 50%;
+  margin: auto auto;
+}
+
+.vagueIntro {
+  z-index: -1;
+  position: absolute;
+  margin-top: -45em;
+  width: 100%;
+  height: 900px;
+}
+
+.pays {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.pays p {
+  background-color: #00f2fe;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.pays p:hover {
+  cursor: pointer;
+}
